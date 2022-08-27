@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { Router } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 
 @Component({
   selector: 'app-nav-bar-js-jump',
@@ -8,14 +8,17 @@ import { Router } from '@angular/router'
 })
 export class NavBarJsJumpComponent implements OnInit {
 
-  constructor (private router: Router) {
+  routeUrl = ''
+
+  constructor (private router: Router, private route: ActivatedRoute) {
   }
 
   ngOnInit (): void {
   }
 
-  jump (path: string) {
-    this.router.navigate([path])
+  jump (url: string) {
+    this.routeUrl = url
+    this.router.navigate([url])
   }
 
 }
