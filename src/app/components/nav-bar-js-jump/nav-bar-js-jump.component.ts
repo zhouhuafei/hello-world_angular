@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { ActivatedRoute, Router } from '@angular/router'
+import { Router, NavigationEnd } from '@angular/router'
 
 @Component({
   selector: 'app-nav-bar-js-jump',
@@ -8,16 +8,28 @@ import { ActivatedRoute, Router } from '@angular/router'
 })
 export class NavBarJsJumpComponent implements OnInit {
 
-  routeUrl = '' // ...TODO 初始化的时候有问题
+  routeUrl = ''
+  routerSubscription
 
-  constructor (private router: Router, private route: ActivatedRoute) {
+  constructor (private router: Router) {
+    this.routerSubscription = this.router.events.subscribe((event: any) => {
+      if (event instanceof NavigationEnd) {
+        console.log(event)
+        this.routeUrl = event.url
+      }
+    })
   }
 
   ngOnInit (): void {
   }
 
+  ngOnDestroy () {
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe()
+    }
+  }
+
   jump (url: string) {
-    this.routeUrl = url
     this.router.navigate([url])
   }
 
