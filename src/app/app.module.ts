@@ -11,6 +11,7 @@ import { AppComponent } from './app.component'
 import { HomeComponent } from './pages/home/home.component'
 import { MineComponent } from './pages/mine/mine.component'
 import { AboutComponent } from './pages/about/about.component'
+import { NotFoundComponent } from './pages/not-found/not-found.component'
 import { NavBarComponent } from './components/nav-bar/nav-bar.component'
 import { NavBarJsJumpComponent } from './components/nav-bar-js-jump/nav-bar-js-jump.component'
 
@@ -20,6 +21,7 @@ import { NavBarJsJumpComponent } from './components/nav-bar-js-jump/nav-bar-js-j
     HomeComponent,
     MineComponent,
     AboutComponent,
+    NotFoundComponent,
     NavBarComponent,
     NavBarJsJumpComponent
   ],

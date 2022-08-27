@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router'
 })
 export class NavBarJsJumpComponent implements OnInit {
 
-  routeUrl = ''
+  routeUrl = '' // ...TODO 初始化的时候有问题
 
   constructor (private router: Router, private route: ActivatedRoute) {
   }
