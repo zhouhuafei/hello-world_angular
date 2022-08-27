@@ -100,7 +100,8 @@
   },
   "schematics": {
     "@schematics/angular:component": {
-      "style": "scss"
+      "style": "scss",
+      "skipTests": true
     }
   },
   "cli": {
