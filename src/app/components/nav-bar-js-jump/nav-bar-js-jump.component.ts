@@ -14,7 +14,6 @@ export class NavBarJsJumpComponent implements OnInit {
   constructor (private router: Router) {
     this.routerSubscription = this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationEnd) {
-        console.log(event)
         this.routeUrl = event.url
       }
     })
