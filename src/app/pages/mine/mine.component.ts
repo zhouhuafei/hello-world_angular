@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { Router } from '@angular/router'
+import { Router, ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-mine',
@@ -8,11 +8,12 @@ import { Router } from '@angular/router'
 })
 export class MineComponent implements OnInit {
 
-  constructor (private router: Router) {
+  constructor (private router: Router, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit (): void {
     console.log('this.router.url：', this.router.url)
+    console.log('this.activatedRoute.snapshot：', this.activatedRoute.snapshot)
   }
 
 }
