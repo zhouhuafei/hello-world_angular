@@ -6,7 +6,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component'
 const routes = [
   { path: 'home', component: HomeComponent },
   { path: 'mine', component: MineComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'about/:uid/behavior/:bid', component: AboutComponent },
   { path: '**', component: NotFoundComponent }
 ]
 
