@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router'
 import { LayoutComponent } from './components/layout/layout.component'
+import { LoginComponent } from './pages/login/login.component'
 import { HomeComponent } from './pages/home/home.component'
 import { MineComponent } from './pages/mine/mine.component'
 import { AboutComponent } from './pages/about/about.component'
@@ -17,7 +18,8 @@ const routes: Routes = [
       { path: 'about/:uid/behavior/:bid', component: AboutComponent, data: { title: '关于' } }
     ]
   },
-  { path: '**', component: NotFoundComponent, data: { title: '404' } }
+  { path: 'login', component: LoginComponent, data: { title: '登录' } },
+  { path: '**', component: NotFoundComponent, data: { title: '页面不存在' } }
 ]
 
 const setGuard = (routes: Routes) => {
