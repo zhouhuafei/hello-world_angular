@@ -29,7 +29,7 @@ import { NavBarJsJumpComponent } from './components/nav-bar-js-jump/nav-bar-js-j
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, { useHash: true })
   ],
   providers: [],
   bootstrap: [AppComponent]
