@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 import { BrowserModule } from '@angular/platform-browser'
+import { APP_BASE_HREF } from '@angular/common'
 
 // 自家的模块放这里
 import { routes } from './app.routes'
@@ -31,7 +32,9 @@ import { NavBarJsJumpComponent } from './components/nav-bar-js-jump/nav-bar-js-j
     BrowserModule,
     RouterModule.forRoot(routes, { useHash: true })
   ],
-  providers: [],
+  providers: [
+    { provide: APP_BASE_HREF, useValue: '/app/base/href' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
