@@ -12,7 +12,7 @@ export class MineComponent implements OnInit {
   }
 
   ngOnInit (): void {
-    console.log('this.router.url：', this.router.url)
+    console.log('this.router：', this.router)
     console.log('this.activatedRoute.snapshot：', this.activatedRoute.snapshot)
   }
 
