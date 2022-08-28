@@ -28,8 +28,8 @@ export class NavBarJsJumpComponent implements OnInit {
     }
   }
 
-  jump (url: string) {
-    this.router.navigate([url], { queryParams: { a: 1, b: 2 } })
+  jump (url: string, ext = {}) {
+    this.router.navigate([url], { queryParams: { a: 1, b: 2, ...ext } })
   }
 
 }

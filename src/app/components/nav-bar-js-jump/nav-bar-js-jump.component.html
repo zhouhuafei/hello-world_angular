@@ -3,5 +3,5 @@
   <div class="item" [ngClass]="{active:routeUrl==='/mine'}" (click)="jump('/mine')">mine</div>
   <div class="item" [ngClass]="{active:routeUrl==='/about/2001/behavior/8001'}" (click)="jump('/about/2001/behavior/8001')">about</div>
   <div class="item" [ngClass]="{active:routeUrl==='/about/2002/behavior/8002'}" (click)="jump('/about/2002/behavior/8002')">about2</div>
-  <div class="item" [ngClass]="{active:routeUrl==='/not-found'}" (click)="jump('/not-found')">not-found</div>
+  <div class="item" [ngClass]="{active:routeUrl==='/not-found?isLogin=0'}" (click)="jump('/not-found',{isLogin:0})">not-found</div>
 </div>

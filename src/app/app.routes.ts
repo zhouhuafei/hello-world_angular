@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component'
 import { MineComponent } from './pages/mine/mine.component'
 import { AboutComponent } from './pages/about/about.component'
 import { NotFoundComponent } from './pages/not-found/not-found.component'
+import { AuthGuard } from './guards/auth.guard'
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -18,5 +19,17 @@ const routes: Routes = [
   },
   { path: '**', component: NotFoundComponent, data: { title: '404' } }
 ]
+
+const setGuard = (routes: Routes) => {
+  routes.forEach(v => {
+    if (!v.redirectTo && !v.children) {
+      v.canActivate = [AuthGuard]
+    }
+    if (v.children) {
+      setGuard(v.children)
+    }
+  })
+}
+setGuard(routes)
 
 export { routes }
