@@ -24,7 +24,7 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/scss"
+                "src/app/scss"
               ]
             },
             "styles": [
@@ -96,7 +96,7 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/scss"
+                "src/app/scss"
               ]
             },
             "styles": [
