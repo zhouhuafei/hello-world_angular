@@ -4,10 +4,10 @@ import { AboutComponent } from './pages/about/about.component'
 import { NotFoundComponent } from './pages/not-found/not-found.component'
 
 const routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'mine', component: MineComponent },
-  { path: 'about/:uid/behavior/:bid', component: AboutComponent },
-  { path: '**', component: NotFoundComponent }
+  { path: 'home', component: HomeComponent, data: { title: '首页' } },
+  { path: 'mine', component: MineComponent, data: { title: '我的' } },
+  { path: 'about/:uid/behavior/:bid', component: AboutComponent, data: { title: '关于' } },
+  { path: '**', component: NotFoundComponent, data: { title: '404' } }
 ]
 
 export { routes }
