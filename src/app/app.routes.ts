@@ -13,10 +13,10 @@ const routes: Routes = [
     children: [
       { path: 'home', component: HomeComponent, data: { title: '首页' } },
       { path: 'mine', component: MineComponent, data: { title: '我的' } },
-      { path: 'about/:uid/behavior/:bid', component: AboutComponent, data: { title: '关于' } },
-      { path: '**', component: NotFoundComponent, data: { title: '404' } }
+      { path: 'about/:uid/behavior/:bid', component: AboutComponent, data: { title: '关于' } }
     ]
-  }
+  },
+  { path: '**', component: NotFoundComponent, data: { title: '404' } }
 ]
 
 export { routes }
