@@ -14,6 +14,7 @@ import { AboutComponent } from './pages/about/about.component'
 import { NotFoundComponent } from './pages/not-found/not-found.component'
 import { NavBarComponent } from './components/nav-bar/nav-bar.component'
 import { NavBarJsJumpComponent } from './components/nav-bar-js-jump/nav-bar-js-jump.component'
+import { LayoutComponent } from './components/layout/layout.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NavBarJsJumpComponent } from './components/nav-bar-js-jump/nav-bar-js-j
     AboutComponent,
     NotFoundComponent,
     NavBarComponent,
-    NavBarJsJumpComponent
+    NavBarJsJumpComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,

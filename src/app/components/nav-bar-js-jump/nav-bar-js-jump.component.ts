@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { Router, NavigationEnd } from '@angular/router'
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router'
 
 @Component({
   selector: 'app-nav-bar-js-jump',
@@ -9,11 +9,13 @@ import { Router, NavigationEnd } from '@angular/router'
 export class NavBarJsJumpComponent implements OnInit {
 
   routeUrl = ''
-  routerSubscription
+  routerSubscription: any
 
-  constructor (private router: Router) {
+  constructor (private router: Router, private activatedRoute: ActivatedRoute) {
     this.routerSubscription = this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationEnd) {
+        console.log('------event', event)
+        console.log('------activatedRoute.snapshot', this.activatedRoute.snapshot)
         this.routeUrl = event.url
       }
     })
@@ -29,7 +31,7 @@ export class NavBarJsJumpComponent implements OnInit {
   }
 
   jump (url: string) {
-    this.router.navigate([url])
+    this.router.navigate([url], { queryParams: { a: 1, b: 2 } })
   }
 
 }
