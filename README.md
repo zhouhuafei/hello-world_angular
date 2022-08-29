@@ -1,9 +1,8 @@
 # 创建项目
 * 本项目是使用`@angular/cli`的`14.2.1`版本，运行`ng new hello-world_angular`命令创建而来。
 * 运行命令后会出现交互框。
-  - ts是否使用严格模式我选的yes（如果不出现此选项则默认就是严格模式）。
-  - css预编译我选的scss。
-  - 是否创建路由我选的yes。
+  - Would you like to add Angular routing? `Yes`
+  - Which stylesheet format would you like to use? `SCSS`
 
 # HelloWorldAngular
 
