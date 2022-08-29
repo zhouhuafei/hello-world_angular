@@ -1,3 +1,5 @@
+> 本项目是使用`@angular/cli`的`14.2.0`版本，运行`ng new hello-world_angular --directory hello-world_angular`命令创建而来。
+
 # HelloWorldAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.
