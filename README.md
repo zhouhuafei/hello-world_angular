@@ -4,7 +4,7 @@
   - Would you like to add Angular routing? `Yes`
   - Which stylesheet format would you like to use? `SCSS`
 
-# HelloWorldAngular
+# hello-world_angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
 
