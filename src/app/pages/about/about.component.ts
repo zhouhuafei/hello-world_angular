@@ -32,4 +32,17 @@ export class AboutComponent implements OnInit {
     }
   }
 
+  formFields = {
+    radio1: 'radio1-1',
+    checkbox1: true,
+    checkbox2: [
+      { value: 'checkbox2-1', checked: false },
+      { value: 'checkbox2-2', checked: false },
+      { value: 'checkbox2-3', checked: false }
+    ]
+  }
+
+  getCheckbox2Checked () {
+    return JSON.stringify(this.formFields.checkbox2.filter(v => v.checked).map(v => v.value))
+  }
 }

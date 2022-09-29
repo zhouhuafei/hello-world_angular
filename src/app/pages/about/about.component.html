@@ -1,1 +1,30 @@
-<p>about works!</p>
+<div>
+  <p>about works!</p>
+  <div style="text-align: center;">
+    <div>
+      <div>radio1：{{ formFields.radio1 }}</div>
+      <div>
+        <label><input type="radio" name="radio" value="radio1-1" [(ngModel)]="formFields.radio1" />radio1-1</label>
+        <label><input type="radio" name="radio" value="radio1-2" [(ngModel)]="formFields.radio1" />radio1-2</label>
+        <label><input type="radio" name="radio" value="radio1-3" [(ngModel)]="formFields.radio1" />radio1-3</label>
+      </div>
+    </div>
+    <div>
+      <div>checkbox1：{{ formFields.checkbox1 }}</div>
+      <div>
+        <input type="checkbox" [(ngModel)]="formFields.checkbox1" />
+      </div>
+    </div>
+    <div>
+      <div>checkbox2：{{ getCheckbox2Checked() }}</div>
+      <div>
+        <label><input type="checkbox" [checked]="formFields.checkbox2[0].checked"
+                      [(ngModel)]="formFields.checkbox2[0].checked" />checkbox2-1</label>
+        <label><input type="checkbox" [checked]="formFields.checkbox2[1].checked"
+                      [(ngModel)]="formFields.checkbox2[1].checked" />checkbox2-2</label>
+        <label><input type="checkbox" [checked]="formFields.checkbox2[2].checked"
+                      [(ngModel)]="formFields.checkbox2[2].checked" />checkbox2-3</label>
+      </div>
+    </div>
+  </div>
+</div>
